@@ -71,8 +71,8 @@ with config.colorscheme;
             critical = 15;
           };
           format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-plugged = " {capacity}%";
+          format-charging = "{icon}⚡ {capacity}%";
+          format-plugged = "{icon}󰚥 {capacity}%";
           format-alt = "{icon} {time}";
           format-icons = [
             "󰁺"
@@ -87,15 +87,9 @@ with config.colorscheme;
           device = "intel_backlight";
           format = "{icon} {percent}%";
           format-icons = [
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
+            "󰃞"
+            "󰃟"
+            "󰃠"
           ];
           on-scroll-up = "brightnessctl set +5%";
           on-scroll-down = "brightnessctl set 5%-";

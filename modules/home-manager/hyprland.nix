@@ -71,7 +71,7 @@
         rounding = 5;
         blur = {
           enabled = true;
-          size = 3;
+          size = 8;
           passes = 3;
           vibrancy = 0.1696;
           ignore_opacity = true;
@@ -112,11 +112,12 @@
       };
 
       windowrulev2 = [
-        "opacity 0.85 0.85,class:^(Alacritty)$"
+        "opacity 0.90 0.90,class:^(Alacritty)$"
         "opacity 0.85 0.85,class:^(waybar)$"
+        "opacity, 0.90 0.90,class:^(org.telegram.desktop)$"
 
         # Make floating windows slightly transparent
-        "opacity 0.95 0.95,floating:1"
+        "opacity 0.90 0.90,floating:1"
 
         # Keep some windows fully opaque
         "opacity 1.0 override 1.0 override,class:^(firefox)$"
@@ -133,6 +134,8 @@
         "float,class:^(FlClash)$"
         "size 1000 600,class:^(FlClash)$"
         "center,class:^(FlClash)$"
+
+        "float,class:^(com.github.neithern.g4music)$"
       ];
 
       bind = [
@@ -147,6 +150,7 @@
         "$mod, F, fullscreen,"
 
         "$mod_SHIFT, s, exec, hyprshot -m region --clipboard-copy"
+        "$mod, L, exec, bash /home/hajmousa/.config/rofi/powermenu.sh"
 
         "$mod, H, movefocus, l"
         "$mod, L, movefocus, r"

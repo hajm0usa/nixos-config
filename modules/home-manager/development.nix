@@ -11,6 +11,8 @@
 
         django
         djangorestframework
+        django-stubs
+        djangorestframework-stubs
         fastapi
         fastapi-cli
 
@@ -67,6 +69,14 @@
     # Lua
     stylua
 
+    # Qt
+    qt6.full
+
+    # Android
+    android-studio
+    flutter
+    android-tools
+
     yaml-language-server
     nodePackages.vscode-langservers-extracted
     nodePackages.typescript-language-server
@@ -79,6 +89,7 @@
     tree-sitter
     html-tidy
     jq
+    texlab # LSP Server for LaTeX
 
     cartero
 
@@ -87,6 +98,7 @@
     gnome-builder
 
     # CLI tools
+    gemini-cli
     direnv
     glow
     httpie

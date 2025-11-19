@@ -33,6 +33,11 @@
     homeDirectory = "/home/hajmousa";
     stateVersion = "25.05";
     enableNixpkgsReleaseCheck = false;
+    packages = [
+      inputs.quickshell.packages."x86_64-linux".default
+      inputs.adw-bluetooth.packages."x86_64-linux".default
+      inputs.antigravity-nix.packages."x86_64-linux".default
+    ];
   };
 
   programs.home-manager.enable = true;
@@ -61,9 +66,28 @@
   };
   programs.fish.enable = true;
 
+
   programs.zen-browser.enable = true;
 
   services.mpris-proxy.enable = true;
 
   systemd.user.startServices = "sd-switch";
+
+  systemd.user.services.polkit-gnome-authentication-agent-1 = {
+    Unit = {
+      Description = "polkit-gnome-authentication-agent-1";
+      Wants = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+    Service = {
+      Type = "simple";
+      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+      Restart = "on-failure";
+      RestartSec = 1;
+      TimeoutStopSec = 10;
+    };
+  };
 }

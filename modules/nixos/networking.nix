@@ -4,8 +4,17 @@
   networking = {
     networkmanager = {
       enable = true;
+      connectionConfig = {
+        "connectivity.enabled" = true;
+        "connectivity.uri" = "http://connectivitycheck.gstatic.com/generate_204";
+      };     
       wifi.powersave = false;
     };
+
+    nameservers = [
+      "4.2.2.4"
+      "4.2.2.2"
+    ];
 
     # firewall = {
     #   enable = true;

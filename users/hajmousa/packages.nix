@@ -4,8 +4,8 @@
   home.packages = with pkgs; [
     # Communication
     # discord
-    telegram-desktop
     flclash
+    chromium
 
     # Media
     # spotify
@@ -30,9 +30,17 @@
     # System utilities
     jmtpfs
     libGL
+    xorg.libXext
     poppler_utils
     sushi
     xwayland
     wl-clipboard
+    ffmpeg
+    imagemagick
+    fastfetch
+
+    steam-run
+    hexo-cli
+
   ];
 }

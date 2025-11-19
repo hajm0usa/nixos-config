@@ -11,7 +11,7 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "sauron";
+  networking.hostName = "Sauron";
 
   boot = {
     loader = {

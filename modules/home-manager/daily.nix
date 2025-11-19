@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     # Communication
     telegram-desktop
+    paper-plane
     thunderbird
     flclash
 
@@ -11,12 +12,17 @@
     totem
     loupe
     inkscape
+    gapless
+    obs-studio
+    gimp
+    kdePackages.kdenlive
 
     # Documents
     libreoffice-fresh
     evince
     xournalpp
     obsidian
+    pdfarranger
 
     setzer
     (texlive.combine {
