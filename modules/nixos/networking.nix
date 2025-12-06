@@ -7,8 +7,11 @@
       connectionConfig = {
         "connectivity.enabled" = true;
         "connectivity.uri" = "http://connectivitycheck.gstatic.com/generate_204";
-      };     
+      };
       wifi.powersave = false;
+      plugins = [
+        pkgs.networkmanager-openvpn
+      ];
     };
 
     nameservers = [
@@ -16,11 +19,9 @@
       "4.2.2.2"
     ];
 
-    # firewall = {
-    #   enable = true;
-    #   allowedTCPPorts = [ ];
-    #   allowedUDPPorts = [ ];
-    # };
+    firewall = {
+      enable = false;
+    };
   };
 
   services.resolved = {
@@ -32,5 +33,9 @@
     ];
   };
 
+  programs.captive-browser= {
+    enable = true;
+    interface = "wlo1";
+  };
   environment.systemPackages = [ pkgs.networkmanagerapplet ];
 }

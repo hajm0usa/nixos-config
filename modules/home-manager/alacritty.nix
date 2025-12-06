@@ -15,7 +15,7 @@
 
       colors = with config.colorScheme.palette; {
         primary = {
-          background = "#${base00}";
+          background = "#131317";
           foreground = "#${base05}";
         };
         normal = {

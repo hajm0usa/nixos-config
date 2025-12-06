@@ -5,7 +5,7 @@
     # Communication
     # discord
     flclash
-    chromium
+    firefox
 
     # Media
     # spotify
@@ -31,7 +31,7 @@
     jmtpfs
     libGL
     xorg.libXext
-    poppler_utils
+    poppler-utils
     sushi
     xwayland
     wl-clipboard
@@ -41,6 +41,9 @@
 
     steam-run
     hexo-cli
+
+    qemu
+    quickshell
 
   ];
 }

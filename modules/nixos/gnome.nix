@@ -1,18 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  services.xserver = {
+  services.xserver.enable = true;
+  services.displayManager.gdm = {
     enable = true;
-
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-      autoSuspend = false;
-    };
-
-    desktopManager.gnome.enable = true;
+    wayland = true;
+    autoSuspend = false;
   };
 
+  services.desktopManager.gnome.enable = true;
   services.gnome = {
     core-apps.enable = true;
     gnome-keyring.enable = true;

@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    rofi-wayland
+    rofi
   ];
   xdg.configFile."rofi/config.rasi".text = ''
     configuration{

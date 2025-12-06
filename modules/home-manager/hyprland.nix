@@ -22,14 +22,14 @@
       "$mod" = "SUPER";
       "$terminal" = "alacritty";
       "$fileManager" = "nautilus";
-      "$menu" = "rofi -show drun";
+      "$menu" = "noctalia-shell ipc call launcher toggle";
 
       monitor = ",preferred,auto,1";
 
       exec-once = [
+        "noctalia-shell"
         "dunst"
         "nm-applet"
-        "blueman-applet"
       ];
 
       env = [
@@ -68,19 +68,15 @@
       };
 
       decoration = {
-        rounding = 5;
+        rounding = 0;
         blur = {
           enabled = true;
-          size = 8;
+          size = 3;
           passes = 3;
           vibrancy = 0.1696;
           ignore_opacity = true;
           new_optimizations = true;
         };
-        # drop_shadow = true;
-        # shadow_range = 4;
-        # shadow_render_power = 3;
-        # "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {
@@ -101,20 +97,21 @@
         preserve_split = true;
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-      };
 
       misc = {
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
       };
 
+      windowrule = [
+        "bordersize 0, focus:0"
+        "bordersize 0, focus:1"
+      ];
+
       windowrulev2 = [
         "opacity 0.90 0.90,class:^(Alacritty)$"
         "opacity 0.85 0.85,class:^(waybar)$"
-        "opacity, 0.90 0.90,class:^(org.telegram.desktop)$"
+        "opacity 0.90 0.90,class:^(org.telegram.desktop)$"
 
         # Make floating windows slightly transparent
         "opacity 0.90 0.90,floating:1"
@@ -131,9 +128,9 @@
         "size 800 600,class:^(.blueman-manager-wrapped)$"
         "center,class:^(.blueman-manager-wrapped)$"
 
-        "float,class:^(FlClash)$"
-        "size 1000 600,class:^(FlClash)$"
-        "center,class:^(FlClash)$"
+        "float,class:^(com.follow.clash)$"
+        "size 1000 600,class:^(com.follow.clash)$"
+        "center,class:^(com.follow.clash)$"
 
         "float,class:^(com.github.neithern.g4music)$"
       ];
@@ -150,12 +147,12 @@
         "$mod, F, fullscreen,"
 
         "$mod_SHIFT, s, exec, hyprshot -m region --clipboard-copy"
-        "$mod, L, exec, bash /home/hajmousa/.config/rofi/powermenu.sh"
+        "$mod, L, exec, noctalia-shell ipc call sessionMenu toggle"
 
-        "$mod, H, movefocus, l"
-        "$mod, L, movefocus, r"
-        "$mod, K, movefocus, u"
-        "$mod, J, movefocus, d"
+        "$mod, left, movefocus, l"
+        "$mod, right, movefocus, r"
+        "$mod, up, movefocus, u"
+        "$mod, down, movefocus, d"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

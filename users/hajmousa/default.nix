@@ -15,9 +15,9 @@
     ./packages.nix
   ];
 
-  colorscheme = inputs.nix-colors.colorschemes.gruvbox-dark-hard;
+  colorscheme = inputs.nix-colors.colorschemes.catppuccin-mocha;
 
-  enable-gaming = false;
+  enable-gaming = true;
 
   theme = {
     cursorSize = 22;
@@ -34,7 +34,6 @@
     stateVersion = "25.05";
     enableNixpkgsReleaseCheck = false;
     packages = [
-      inputs.quickshell.packages."x86_64-linux".default
       inputs.adw-bluetooth.packages."x86_64-linux".default
       inputs.antigravity-nix.packages."x86_64-linux".default
     ];

@@ -3,6 +3,7 @@
 {
   imports = [
     ./alacritty.nix
+    # ./caelestia.nix
     ./daily.nix
     ./development.nix
     ./dunst.nix
@@ -12,10 +13,7 @@
     ./gtk.nix
     ./hypridle.nix
     ./hyprland.nix
-    ./hyprlock.nix
-    ./hyprpaper.nix
-    ./rofi.nix
-    ./swayosd.nix
-    ./waybar.nix
+    ./kitty.nix
+    ./noctalia.nix
   ];
 }

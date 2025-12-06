@@ -69,11 +69,8 @@
     # Lua
     stylua
 
-    # Qt
-    qt6.full
-
     # Android
-    android-studio
+    # android-studio
     flutter
     android-tools
 

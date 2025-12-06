@@ -5,7 +5,6 @@
     telegram-desktop
     paper-plane
     thunderbird
-    flclash
 
     # Media
     vlc
@@ -32,6 +31,12 @@
         bidi
         fontspec
         zref
+        pgfplots
+        tcolorbox
+        tikzfill
+        pdfcol
+        mdframed
+        needspace
         ;
     })
   ];
