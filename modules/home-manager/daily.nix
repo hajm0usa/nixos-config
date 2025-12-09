@@ -37,6 +37,11 @@
         pdfcol
         mdframed
         needspace
+        algorithms
+        algpseudocodex
+        algorithm2e
+        ifoddpage
+        relsize
         ;
     })
   ];

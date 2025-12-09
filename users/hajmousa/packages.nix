@@ -41,6 +41,7 @@
 
     steam-run
     hexo-cli
+    zola
 
     qemu
     quickshell
