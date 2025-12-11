@@ -38,12 +38,12 @@
         "XCURSOR_THEME,${config.theme.cursorTheme}"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,hyprland"
-        "QT_QPA_PLATFORM,wayland;xcb" # Use Wayland first, fallback to X11
+        # "QT_QPA_PLATFORM,wayland;xcb" # Use Wayland first, fallback to X11
         "GDK_BACKEND,wayland"
         "SDL_VIDEODRIVER,wayland" # For games using SDL
         "MOZ_ENABLE_WAYLAND,1" # Firefox/Thunderbird Wayland support
         "NIXOS_OZONE_WL,1"
-        "QT_QPA_PLATFORMTHEME,qt5ct"
+        # "QT_QPA_PLATFORMTHEME,qt5ct"
       ];
 
       input = {

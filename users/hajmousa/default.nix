@@ -36,6 +36,11 @@
     packages = [
       inputs.adw-bluetooth.packages."x86_64-linux".default
       inputs.antigravity-nix.packages."x86_64-linux".default
+      pkgs.libsForQt5.qt5ct
+      pkgs.qt6Packages.qt6ct
+      # pkgs.libsForQt5.breeze-qt5
+      pkgs.kdePackages.breeze
+      pkgs.libsForQt5.breeze-icons
     ];
   };
 
@@ -88,5 +93,10 @@
       RestartSec = 1;
       TimeoutStopSec = 10;
     };
+  };
+
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_STYLE_OVERRIDE = "breeze";
   };
 }

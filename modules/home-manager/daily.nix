@@ -24,6 +24,8 @@
     pdfarranger
 
     setzer
+    texstudio
+    kile
     (texlive.combine {
       inherit (texlive)
         scheme-small
